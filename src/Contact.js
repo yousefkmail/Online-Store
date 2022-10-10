@@ -5,7 +5,7 @@ const Contact = () => {
     <div className={style.outer}>
       <div className={style.contact}>
         <div className={style.header}>
-          <h1>Contact Us </h1>
+          <h2>Send us a message </h2>
         </div>
         <form>
           <div className={style.inputfield}>
@@ -27,7 +27,11 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className={style.contact1}>helloworld</div>
+      <div className={style.contact1}>
+        <div className={style.header1}>
+          <h2>Contact us </h2>
+        </div>
+      </div>
     </div>
   );
 };

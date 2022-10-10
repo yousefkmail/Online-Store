@@ -2,7 +2,7 @@ import style from "./Navbar.module.css";
 import Navbutton from "./navbutton";
 import { useState } from "react";
 const Navbar = () => {
-  const [isNavBarActive, setIsNavBarActive] = useState(false);
+  const [isNavBarActive, setIsNavBarActive] = useState(true);
 
   function onToggle() {
     setIsNavBarActive(!isNavBarActive);
@@ -20,7 +20,10 @@ const Navbar = () => {
           <button className={style.togglebutton} onClick={onToggle}>
             toggleButtons
           </button>
-          <div className={isNavBarActive ? style.active : style.deactive}>
+          <div
+            id="buttons"
+            className={isNavBarActive ? style.active : style.deactive}
+          >
             <Navbutton link={"about"} />
             <Navbutton link={"contact"} />
             <Navbutton link={"home"} />

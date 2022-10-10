@@ -1,77 +1,85 @@
 .outer {
-    color: blue;
+  color: blue;
 }
 
 .navigationbar {
-background-color: transparent;
-width: 100%;
-height: 100px ;
-top: 0;
-position: sticky;
+  background-color: transparent;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  position: sticky;
 }
 
 .navbuttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    float: right;
-    width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  float: right;
+  width: 200px;
 }
 
 .active {
-    transform: translateX(0%);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.5s ease-in ;
-
+  transform: translateX(0%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in;
 }
 
 .deactive {
-transform: translateX(100%);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.5s ease-in ;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in;
 }
 .navbutton {
-padding: 10px;
-border: none;
-text-decoration: none;
-width: 100%;
-
+  padding: 10px;
+  border: none;
+  text-decoration: none;
+  width: 100%;
 }
 
 .togglebutton {
-
-    width: 100px;
-    height: 30px;
-    background-color: red;
-    border: none;
-position: relative;
-left: 100px;
+  width: 100px;
+  height: 30px;
+  background-color: red;
+  border: none;
+  position: relative;
+  left: 100px;
 }
 
 .navbutton:hover {
-    padding: 10px;
-    border: none;
-    background-color: yellow;
-
-    }
-
-
-.navbuttonactive {
-    padding: 10px;
-    border: none;
-    border-radius: 7px;
-    background-color: rgba(255, 255, 0, 0.507);
-    text-decoration: none;
-
-    }
-    
-    
-
-
-.navimage {
-width: 20%;
-aspect-ratio: 3/1;
+  padding: 10px;
+  border: none;
+  background-color: yellow;
 }
 
+.navbuttonactive {
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 0, 0.507);
+  text-decoration: none;
+}
+
+.navimage {
+  width: 20%;
+  aspect-ratio: 3/1;
+}
+
+@media only screen and (min-width: 600px) {
+  .togglebutton {
+    display: none;
+  }
+
+  .active {
+    flex-direction: row;
+    transform: translateX(0%);
+    transition: transform 0s ease-in;
+  }
+
+  .deactive {
+    transform: translateX(0%);
+    flex-direction: row;
+    transition: transform 0s ease-in;
+  }
+}
