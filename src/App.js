@@ -1,23 +1,19 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./Home";
 
+import "./App.css";
+import Contact from "./Contact";
+import About from "./About";
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Navbar />
         <Routes>
-          <Route
-            element={
-              <div>
-                NAVBAR
-                <Outlet />
-              </div>
-            }
-          >
-            <Route path="home" element={<div>Me in home </div>} />
-            <Route path="about" element={<div>Me in about </div>} />
-            <Route path="contact" element={<div>Me in contact </div>} />
-          </Route>
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
         </Routes>
       </div>
     </BrowserRouter>
