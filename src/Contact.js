@@ -1,5 +1,5 @@
 import style from "./Contact.module.css";
-
+import Contactinfo from "./ContactInfo";
 const Contact = () => {
   return (
     <div className={style.outer}>
@@ -31,6 +31,10 @@ const Contact = () => {
         <div className={style.header1}>
           <h2>Contact us </h2>
         </div>
+        <Contactinfo info="Phone" value="056943555 " />
+        <Contactinfo info="Address" value="her business/home address " />
+        <Contactinfo info="Email" value="Yousef.hnaty@gmail.com " />
+        <Contactinfo info="Website" value="www.cuebat.com" />
       </div>
     </div>
   );
