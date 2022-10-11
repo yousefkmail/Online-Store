@@ -20,10 +20,7 @@ const Navbar = () => {
           <button className={style.togglebutton} onClick={onToggle}>
             toggleButtons
           </button>
-          <div
-            id="buttons"
-            className={isNavBarActive ? style.active : style.deactive}
-          >
+          <div className={isNavBarActive ? style.active : style.deactive}>
             <Navbutton link={"about"} />
             <Navbutton link={"contact"} />
             <Navbutton link={"home"} />

@@ -1,6 +1,4 @@
-.outer {
-  color: blue;
-}
+
 
 .navigationbar {
   background-color: transparent;
@@ -15,7 +13,7 @@
   flex-direction: column;
   justify-content: right;
   float: right;
-  width: 200px;
+  width: auto;
 }
 
 .active {
@@ -31,17 +29,25 @@
   flex-direction: column;
   transition: transform 0.5s ease-in;
 }
-.navbutton {
+.navbutton ,.navbuttonactive {
   padding: 10px;
   border: none;
   text-decoration: none;
-  width: 100%;
+  border-radius: 7px;
+  height: 70px;
+  width: 300px;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+.navbuttonactive {
+  background-color: rgba(223, 223, 186, 0.507);
 }
 
 .togglebutton {
   width: 100px;
   height: 30px;
-  background-color: red;
   border: none;
   position: relative;
   left: 100px;
@@ -50,19 +56,13 @@
 .navbutton:hover {
   padding: 10px;
   border: none;
-  background-color: yellow;
+  background-color: rgb(196, 196, 164);
 }
 
-.navbuttonactive {
-  padding: 10px;
-  border: none;
-  border-radius: 7px;
-  background-color: rgba(255, 255, 0, 0.507);
-  text-decoration: none;
-}
+
 
 .navimage {
-  width: 20%;
+  width: 15%;
   aspect-ratio: 3/1;
 }
 
@@ -71,15 +71,14 @@
     display: none;
   }
 
-  .active {
+  .active , .deactive{
     flex-direction: row;
     transform: translateX(0%);
     transition: transform 0s ease-in;
   }
 
-  .deactive {
-    transform: translateX(0%);
-    flex-direction: row;
-    transition: transform 0s ease-in;
+  .navbutton  , .navbuttonactive{
+
+    width: 100px;
   }
 }
