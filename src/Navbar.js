@@ -13,17 +13,27 @@ const Navbar = () => {
       <nav className={style.navigationbar}>
         <img
           className={style.navimage}
-          src="http://cardwellchiropractic.com/static/media/cardwell-logo1.fb8cf282.png"
+          src={process.env.REACT_APP_WEBSITE_LOGO}
           alt="No  Found"
         ></img>
+
+        <div style={{ padding: "20px" }}>
+          <i class={process.env.REACT_APP_INCART_ICON}></i>
+          <i class={process.env.REACT_APP_INFAVORITE_ICON}></i>
+        </div>
+
         <div className={style.navbuttons}>
           <button className={style.togglebutton} onClick={onToggle}>
             toggleButtons
           </button>
-          <div className={isNavBarActive ? style.active : style.deactive}>
-            <Navbutton link={"about"} />
-            <Navbutton link={"contact"} />
-            <Navbutton link={"home"} />
+          <div
+            className={
+              isNavBarActive ? style.navbuttonshowen : style.navbuttonhidden
+            }
+          >
+            <Navbutton link={process.env.REACT_APP_LINK_ABOUT} />
+            <Navbutton link={process.env.REACT_APP_LINK_CONTACT} />
+            <Navbutton link={process.env.REACT_APP_LINK_HOME} />
           </div>
         </div>
       </nav>

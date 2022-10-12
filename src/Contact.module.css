@@ -1,8 +1,11 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+.outer {
+  z-index: -1;
+}
 
-.contact {
+.contactus {
   color: white;
   width: 400px;
   height: 600px;
@@ -12,7 +15,7 @@
   border-radius: 10px;
 }
 
-.contact1 {
+.ourinfo {
   box-shadow: 0 2px 2px rgb(123, 120, 120);
   width: 400px;
   height: 600px;
@@ -22,33 +25,33 @@
   border-radius: 10px;
 }
 
-.header {
+.headercontactus {
   width: 100%;
   height: 20%;
   text-align: center;
   position: relative;
 }
-.header1 {
+.headerourinfo {
   width: 100%;
   height: 20%;
   position: relative;
 }
 
-.header h2 {
+.headercontactus h2 {
   color: white;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.header1 h2 {
+.headerourinfo h2 {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 30px;
 }
 
-.header1 h2::before {
+.headerourinfo h2::before {
   content: "";
   position: absolute;
   width: 40%;

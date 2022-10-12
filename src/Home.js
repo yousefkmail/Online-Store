@@ -1,9 +1,11 @@
-import Shoppingitem from "./ShoppingItem";
-
+import Shoppingitems from "./Shoppingitems";
+import Filterbar from "./Filterbar";
+import style from "./Home.module.css";
 const Home = () => {
   return (
-    <div>
-      <Shoppingitem content="First Iten" />
+    <div className={style.main}>
+      <Filterbar />
+      <Shoppingitems />
     </div>
   );
 };
