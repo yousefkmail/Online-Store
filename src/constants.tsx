@@ -26,3 +26,4 @@ export const ITEM_IMAGE = "https://media.istockphoto.com/vectors/blank-white-scr
 export const IMAGE_NOT_FOUND = "Cannot preview image"
 export const CONTACT_US_MESSAGE = "Contact us "
 export const SENDING_MESSAGE_HEADER = "Send us a message"
+export const TOGGLEBUTTON = "Toggle button"
