@@ -1,6 +1,7 @@
 import Shoppingitem from "./ShoppingItem";
-import style from "./Shoppingitem.module.css";
+import style from './Shoppingitem.module.css';
 const Shoppingitems = () => {
+
   return (
     <div className={style.items}>
       <Shoppingitem />;
@@ -12,5 +13,4 @@ const Shoppingitems = () => {
     </div>
   );
 };
-
 export default Shoppingitems;

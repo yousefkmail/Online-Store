@@ -1,6 +1,11 @@
 import style from "./Contact.module.css";
+  
+interface contact {
+  info : string ;
+  value : string ;
+}
 
-const Contactinfo = (props) => {
+const Contactinfo = (props:contact) => {
   return (
     <div className={style.contactinfo}>
       <h4>{props.info} :</h4>
