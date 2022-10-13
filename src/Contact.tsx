@@ -1,12 +1,12 @@
 import style from "./Contact.module.css";
 import Contactinfo from "./ContactInfo";
-import { CONTACTUS_EMAIL , CONTACTUS_MESSAGE , CONTACTUS_NAME , CONTACTUS_SUBJECT , EMAIL , WEBSITE , PHONE_NUMBER ,ADDRESS  , CONTACTUS_EMAIL_LABEL , CONTACTUS_NUMBER_LABEL , CONTACTUS_ADDRESS_LABEL , CONTACTUS_WEBSITE_LABEL} from "./constants";
+import { SENDING_MESSAGE_HEADER , CONTACT_US_MESSAGE ,CONTACTUS_EMAIL , CONTACTUS_MESSAGE , CONTACTUS_NAME , CONTACTUS_SUBJECT , EMAIL , WEBSITE , PHONE_NUMBER ,ADDRESS  , CONTACTUS_EMAIL_LABEL , CONTACTUS_NUMBER_LABEL , CONTACTUS_ADDRESS_LABEL , CONTACTUS_WEBSITE_LABEL} from "./constants";
 const Contact = () => {
   return (
     <div className={style.outer}>
       <div className={style.contactus}>
         <div className={style.headercontactus}>
-          <h2>Send us a message </h2>
+          <h2>{SENDING_MESSAGE_HEADER}</h2>
         </div>
         <form>
           <div className={style.inputfield}>
@@ -30,7 +30,7 @@ const Contact = () => {
 
       <div className={style.ourinfo}>
         <div className={style.headerourinfo}>
-          <h2>Contact us </h2>
+          <h2>{CONTACT_US_MESSAGE}</h2>
         </div>
         <Contactinfo info={CONTACTUS_NUMBER_LABEL} value={PHONE_NUMBER} />
         <Contactinfo info={CONTACTUS_ADDRESS_LABEL} value={ADDRESS} />

@@ -1,7 +1,7 @@
 import style from "./Navbar.module.css";
 import Navbutton from "./navbutton";
 import { useState } from "react";
-import  {LINK_About , LINK_Contact  , LINK_Home , WEBSITE_LOGO , INCART_ICON , INFAVORITE_ICON} from "./constants"
+import  {LINK_About , LINK_Contact  , LINK_Home , WEBSITE_LOGO , INCART_ICON , INFAVORITE_ICON , IMAGE_NOT_FOUND} from "./constants"
 const Navbar = () => {
   const [isNavBarActive, setIsNavBarActive] = useState(true);
 
@@ -15,10 +15,10 @@ const Navbar = () => {
         <img
           className={style.navimage}
           src={WEBSITE_LOGO}
-          alt="No  Found"
+          alt={IMAGE_NOT_FOUND}
         ></img>
 
-        <div style={{ padding: "20px" }}>
+        <div>
           <i className={INCART_ICON}></i>
           <i className={INFAVORITE_ICON}></i>
         </div>
