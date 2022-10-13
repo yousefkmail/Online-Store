@@ -1,12 +1,12 @@
 import { useState } from "react";
-
+import style from  "./Filterbar.module.css"
+import { PRICE_SLIDER_LABEL } from "./constants";
 const Filterbar = () => {
   const [value, setValue] = useState(25);
   return (
-    <div style={{ minWidth: " 200px", border: "1px solid purple " }}>
+    <div className={style.filterbar}>
       <input
         type="range"
-        name=""
         id="llabel"
         min="0"
         max="50"
@@ -15,10 +15,8 @@ const Filterbar = () => {
           setValue( parseInt(input) ) ;
         }}
       />
-      <label htmlFor="llabel">Pick your price {value} </label>
+      <label htmlFor="llabel">{PRICE_SLIDER_LABEL} {value} </label>
       <br />
-      <label htmlFor="rate"> Rating </label>
-      <input type="radio" id="" />
     </div>
   );
 };
