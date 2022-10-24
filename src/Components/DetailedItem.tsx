@@ -5,6 +5,7 @@ import { item } from "../Types";
 import style from "../Styles/Detaileditem.module.css";
 import Shoppingitem from "./ShoppingItem";
 import { useNavigate } from "react-router-dom";
+import Shoppingitems from "./Shoppingitems";
 const Detaileditem = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -13,13 +14,15 @@ const Detaileditem = () => {
   const [item, setItem] = useState<item>({} as item);
 
   useEffect(() => {
+    let item: item = {} as item;
     Items.forEach((element) => {
       if (element.id === id) {
         setItem(element);
+        item = element;
       }
     });
-    !item && navigate("/");
-  }, [item]);
+    if (Items.length > 0 && Object.keys(item).length === 0) navigate("/home");
+  }, [Items, id]);
 
   function getitemdata() {
     const array: any = [];
@@ -34,18 +37,31 @@ const Detaileditem = () => {
     return array;
   }
   return (
-    <div className={style.detaileditem}>
-      <img src={item.url} alt="" />
-      <div className={style.infowrapper}>
-        <button onClick={() => Addtofavorite(item)}>
-          {!Favorite.includes(item)
-            ? "   Add to Favorite"
-            : "Remove from favorite "}
-        </button>
-        <button onClick={() => Addtocart(item)}>Add to Cart </button>
+    <div>
+      <div className={style.detaileditem}>
+        <img src={item.url} alt="" />
+        <div className={style.infowrapper}>
+          <button onClick={() => Addtofavorite(item)}>
+            {!Favorite.includes(item)
+              ? "   Add to Favorite"
+              : "Remove from favorite "}
+          </button>
+          <button onClick={() => Addtocart(item)}>
+            {" "}
+            {!Cart.includes(item) ? "   Add to Cart" : "Remove from Cart "}
+          </button>
 
-        {getitemdata()}
+          {getitemdata()}
+        </div>
       </div>
+      <div>
+        <h2>Related items </h2>
+      </div>
+      <Shoppingitems
+        items={Items.filter(
+          (element) => element.type === item.type && element !== item
+        )}
+      />
     </div>
   );
 };

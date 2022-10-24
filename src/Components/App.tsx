@@ -9,6 +9,8 @@ import { AppContext } from "../Context/AppContext";
 import Shoppingitems from "./Shoppingitems";
 import Detaileditem from "./DetailedItem";
 import Footer from "./Footer";
+import Nocomponentfound from "./NoItemsFound";
+import Searchbar from "./SearchBar";
 
 function App() {
   const context = useContext(AppContext);
@@ -18,11 +20,30 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
+        <Searchbar />
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="favorite" element={<Shoppingitems items={Favorite} />} />
-          <Route path="mycart" element={<Shoppingitems items={Cart} />} />
+          <Route
+            path="favorite"
+            element={
+              Favorite.length > 0 ? (
+                <Shoppingitems items={Favorite} />
+              ) : (
+                <Nocomponentfound />
+              )
+            }
+          />
+          <Route
+            path="mycart"
+            element={
+              Cart.length > 0 ? (
+                <Shoppingitems items={Cart} />
+              ) : (
+                <Nocomponentfound />
+              )
+            }
+          />
           <Route path="item/:id" element={<Detaileditem />} />
           <Route path="contact" element={<Contact />} />
         </Routes>

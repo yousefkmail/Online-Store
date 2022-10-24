@@ -45,12 +45,12 @@ const Shoppingitems = ({ items }: props) => {
         ))}
       </div>
       <div className={style.controllingbuttons}>
-        {items && (
+        {items.length > 0 && (
           <button disabled={Prevdisabled} onClick={handlePrev}>
             <i className={"fa-solid fa-arrow-left " + style.icon}></i>
           </button>
         )}
-        {items && (
+        {items.length > 0 && (
           <button disabled={Nextdisabled} onClick={handleNext}>
             <i className={"fa-solid fa-arrow-right " + style.icon}></i>
           </button>

@@ -83,12 +83,19 @@
 .togglebutton,
 .togglebuttonalone {
   width: 100%;
-  height: 30px;
+  font-size: 24px;
+  padding: 10px 0px;
   border: none;
   position: relative;
+  background-color:#155B4A ;
+  color:white;
+  
+cursor: pointer;
 }
 
 .togglebuttonalone {
+  background-color:#245447 ;
+
   width: 200px;
 }
 .mydiv::before {

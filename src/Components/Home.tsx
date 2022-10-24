@@ -4,17 +4,26 @@ import style from "../Styles/Home.module.css";
 import { useContext, useEffect, useState } from "react";
 import { item } from "../Types";
 import { AppContext } from "../Context/AppContext";
+import { useSearchParams } from "react-router-dom";
 
 const Home = () => {
   const context = useContext(AppContext);
+  const [searchParams, setsearchparams] = useSearchParams();
   const { Items } = context;
   const [filtereditems, SetFilteredItems] = useState<item[]>([]);
 
   useEffect(() => {
-    SetFilteredItems(Items);
-  }, [Items]);
+    if (!searchParams.get("s")) SetFilteredItems(Items);
+    else {
+      SetFilteredItems(
+        Items.filter((element) => element.type.includes(searchParams.get("s")!))
+      );
+    }
+  }, [searchParams]);
 
-  useEffect(() => {}, [filtereditems]);
+  useEffect(() => {
+    console.log(filtereditems);
+  }, [filtereditems]);
 
   return (
     <div>

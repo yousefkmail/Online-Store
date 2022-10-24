@@ -31,7 +31,7 @@ const Navbar = () => {
 
       {!isNavBarActive && (
         <button className={style.togglebuttonalone} onClick={onToggle}>
-          {TOGGLEBUTTON}
+          Menu
         </button>
       )}
 
@@ -40,13 +40,14 @@ const Navbar = () => {
           isNavBarActive ? style.navbuttonshowen : style.navbuttonshidden
         }
       >
-        <button className={style.togglebutton} onClick={onToggle}>
-          {TOGGLEBUTTON}
-        </button>
-
+       
         <Navbutton link={LINK_About} />
         <Navbutton link={LINK_Contact} />
         <Navbutton link={LINK_Home} />
+        <button className={style.togglebutton} onClick={onToggle}>
+         Close
+        </button>
+
       </div>
       <div className={style.cartfavoriteicons}>
         <NavLink to={"./mycart"}>

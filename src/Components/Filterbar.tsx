@@ -23,10 +23,9 @@ const Filterbar = ({ SetFilteredItems }: props) => {
   //SetFilteredItems(filteredarray);
   function getTypes() {
     const typess: any[] = [];
-
     types.forEach((element) => {
       typess.push(
-        <div key={element} className={style.itemtype}>
+        <div key={typess.length} className={style.itemtype}>
           <label htmlFor={element}>{element}</label>
           <input
             onChange={(e) => changed(e)}
