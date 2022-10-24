@@ -1,6 +1,21 @@
-import style from "./Contact.module.css";
+import style from "../Styles/Contact.module.css";
 import Contactinfo from "./ContactInfo";
-import { SENDING_MESSAGE_HEADER , CONTACT_US_MESSAGE ,CONTACTUS_EMAIL , CONTACTUS_MESSAGE , CONTACTUS_NAME , CONTACTUS_SUBJECT , EMAIL , WEBSITE , PHONE_NUMBER ,ADDRESS  , CONTACTUS_EMAIL_LABEL , CONTACTUS_NUMBER_LABEL , CONTACTUS_ADDRESS_LABEL , CONTACTUS_WEBSITE_LABEL} from "./constants";
+import {
+  SENDING_MESSAGE_HEADER,
+  CONTACT_US_MESSAGE,
+  CONTACTUS_EMAIL,
+  CONTACTUS_MESSAGE,
+  CONTACTUS_NAME,
+  CONTACTUS_SUBJECT,
+  EMAIL,
+  WEBSITE,
+  PHONE_NUMBER,
+  ADDRESS,
+  CONTACTUS_EMAIL_LABEL,
+  CONTACTUS_NUMBER_LABEL,
+  CONTACTUS_ADDRESS_LABEL,
+  CONTACTUS_WEBSITE_LABEL,
+} from "../constants";
 const Contact = () => {
   return (
     <div className={style.outer}>
@@ -23,7 +38,7 @@ const Contact = () => {
           </div>
           <div className={style.inputfield}>
             <label>{CONTACTUS_MESSAGE}</label>
-            <textarea maxLength={100} ></textarea>
+            <textarea maxLength={100}></textarea>
           </div>
         </form>
       </div>
