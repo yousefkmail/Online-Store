@@ -1,0 +1,164 @@
+.navigationbar {
+  background-color: transparent;
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(36, 84, 71);
+  z-index: 1;
+}
+
+.navigationbar img {
+  color: white;
+}
+
+.navbuttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 100%;
+  z-index: 5;
+  float: right;
+  width: auto;
+}
+
+.navbuttonshowen,
+.navbuttonshidden {
+  position: absolute;
+  left: 0;
+  transform: translateY(0%);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  background-color: rgb(21, 91, 74);
+}
+
+.navbuttonshidden {
+  transform: translateY(-100%);
+}
+
+.navbutton,
+.navbuttonactive {
+  border: none;
+  width: 100%;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: center;
+  transition: color 1s;
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.navbutton:hover {
+  color: white;
+  border: none;
+}
+
+.navbuttonactive {
+  color: white;
+  border-bottom: 3px solid rgb(253, 253, 253);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.mydiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin: 7px;
+  transition: border 1s ease-out;
+}
+
+.togglebutton,
+.togglebuttonalone {
+  width: 100%;
+  font-size: 24px;
+  padding: 10px 0px;
+  border: none;
+  position: relative;
+  background-color:#155B4A ;
+  color:white;
+  
+cursor: pointer;
+}
+
+.togglebuttonalone {
+  background-color:#245447 ;
+
+  width: 200px;
+}
+.mydiv::before {
+  z-index: -1;
+  content: "";
+  border-bottom: 3px solid transparent;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.mydiv:hover::before {
+  width: 100%;
+  border-bottom: 3px solid rgb(253, 253, 253);
+}
+
+i {
+  color: #15d186;
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+}
+
+.cartfavoriteicons {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.navimage {
+  width: 15%;
+  aspect-ratio: 3/1;
+}
+
+@media only screen and (min-width: 600px) {
+  .togglebutton,
+  .togglebuttonalone {
+    display: none;
+  }
+
+  .navbuttonshowen,
+  .navbuttonshidden {
+    position: relative;
+    background-color: transparent;
+    width: 300px;
+    flex-direction: row;
+    transform: translateX(0%);
+    transition: transform 0s ease-in;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbutton,
+  .navbuttonactive {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbuttons {
+    width: 30%;
+    z-index: 5;
+  }
+}
