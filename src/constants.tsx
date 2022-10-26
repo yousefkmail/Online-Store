@@ -1,6 +1,5 @@
 export const LINK_About = "About";
 export const LINK_Contact = "Contact";
-export const LINK_Home = "Home";
 export const ADDRESS = "her business/home address";
 export const PHONE_NUMBER = "056943555";
 export const EMAIL = "yousef.hnaty@gmail.com";
@@ -46,3 +45,14 @@ export const ABOUT_US_INFO =
 
 export const ABOUT_US_LABEL = "About us ";
 export const ABOUT_US_TITLE = "We deliver fast services";
+export const MENU_LABEL = "Menu";
+export const CLOSE_LABEL = "Close ";
+export const NO_ITEMS_ADDED_LABEL = "No items found ";
+export const START_SHOPPING_LABEL = "Start shopping";
+export const MY_CART_LINK = "mycart";
+export const FAVORITE_LINK = "favorite";
+export const INSTAGRAM_ICON = "fa-brands fa-instagram";
+export const FACEBOOK_ICON = "fa-brands fa-facebook";
+export const YOUTUBE_ICON = "fa-brands fa-youtube";
+export const ABOUT_HEADER =
+  "https://cdn.discordapp.com/attachments/710546761537683490/1032572978422108201/uuuuuu.jpg";
