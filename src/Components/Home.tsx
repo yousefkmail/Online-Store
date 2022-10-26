@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { item } from "../Types";
 import { AppContext } from "../Context/AppContext";
 import { useSearchParams } from "react-router-dom";
+import { IMAGE_NOT_FOUND } from "../constants";
 
 const Home = () => {
   const context = useContext(AppContext);
@@ -21,16 +22,14 @@ const Home = () => {
     }
   }, [searchParams]);
 
-  useEffect(() => {
-    console.log(filtereditems);
-  }, [filtereditems]);
+  useEffect(() => {}, [filtereditems]);
 
   return (
     <div>
       <div className={style.mainheader}>
         <img
           src="https://i0.wp.com/watanimall.com/wp-content/uploads/2022/08/WATANI-SECURITY-PROGRAM-BANNER.png?fit=1920%2C675&ssl=1"
-          alt=""
+          alt={IMAGE_NOT_FOUND}
         />
       </div>
 
