@@ -1,0 +1,57 @@
+.items {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(36, 84, 71);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.item {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.item img {
+  width: 80%;
+  aspect-ratio: 1/1;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  line-height: 0;
+  font-size: 2em;
+  vertical-align: -0.1875em;
+}
+.desc {
+  text-align: center;
+  margin: 5%;
+}
+
+.controllingbuttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.controllingbuttons button {
+  width: 100px;
+  height: 70px;
+}
+
+
