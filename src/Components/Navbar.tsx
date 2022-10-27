@@ -4,14 +4,17 @@ import style1 from "../Styles/Shoppingitem.module.css";
 
 import { useState } from "react";
 import {
-  TOGGLEBUTTON,
   LINK_About,
   LINK_Contact,
-  LINK_Home,
   WEBSITE_LOGO,
   INCART_ICON,
   INFAVORITE_ICON,
   IMAGE_NOT_FOUND,
+  MENU_LABEL,
+  CLOSE_LABEL,
+  MY_CART_LINK,
+  FAVORITE_LINK,
+  LINK_HOME,
 } from "../constants";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
@@ -31,7 +34,7 @@ const Navbar = () => {
 
       {!isNavBarActive && (
         <button className={style.togglebuttonalone} onClick={onToggle}>
-          Menu
+          {MENU_LABEL}
         </button>
       )}
 
@@ -40,20 +43,18 @@ const Navbar = () => {
           isNavBarActive ? style.navbuttonshowen : style.navbuttonshidden
         }
       >
-       
         <Navbutton link={LINK_About} />
         <Navbutton link={LINK_Contact} />
-        <Navbutton link={LINK_Home} />
+        <Navbutton link={LINK_HOME} />
         <button className={style.togglebutton} onClick={onToggle}>
-         Close
+          {CLOSE_LABEL}
         </button>
-
       </div>
       <div className={style.cartfavoriteicons}>
-        <NavLink to={"./mycart"}>
+        <NavLink to={MY_CART_LINK}>
           <i className={INCART_ICON + " " + style1.icon}></i>
         </NavLink>
-        <NavLink to={"./favorite"}>
+        <NavLink to={FAVORITE_LINK}>
           <i className={INFAVORITE_ICON + " " + style1.icon}></i>
         </NavLink>
       </div>

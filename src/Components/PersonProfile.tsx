@@ -1,15 +1,19 @@
 import style from "../Styles/About.module.css";
+import {
+  INSTAGRAM_ICON,
+  FACEBOOK_ICON,
+  YOUTUBE_ICON,
+  ABOUT_HEADER,
+  IMAGE_NOT_FOUND,
+} from "../constants";
 const Personprofile = () => {
   return (
     <div className={style.person}>
-      <img
-        src="https://cdn.discordapp.com/attachments/710546761537683490/1032572978422108201/uuuuuu.jpg"
-        alt=""
-      />
+      <img src={ABOUT_HEADER} alt={IMAGE_NOT_FOUND} />
 
-      <i className={"fa-brands fa-facebook" + " " + style.icon}></i>
-      <i className={"fa-brands fa-instagram" + " " + style.icon}></i>
-      <i className={"fa-brands fa-youtube" + " " + style.icon}></i>
+      <i className={FACEBOOK_ICON + " " + style.icon}></i>
+      <i className={INSTAGRAM_ICON + " " + style.icon}></i>
+      <i className={YOUTUBE_ICON + " " + style.icon}></i>
     </div>
   );
 };
