@@ -2,6 +2,7 @@ import Shoppingitem from "./ShoppingItem";
 import style from "../Styles/Shoppingitem.module.css";
 import { item } from "../Types";
 import { useEffect, useState } from "react";
+import { ARROW_LEFT_ICON, ARROW_RIGHT_ICON } from "../constants";
 
 interface props {
   items: item[];
@@ -47,12 +48,12 @@ const Shoppingitems = ({ items }: props) => {
       <div className={style.controllingbuttons}>
         {items.length > 0 && (
           <button disabled={Prevdisabled} onClick={handlePrev}>
-            <i className={"fa-solid fa-arrow-left " + style.icon}></i>
+            <i className={ARROW_LEFT_ICON + style.icon}></i>
           </button>
         )}
         {items.length > 0 && (
           <button disabled={Nextdisabled} onClick={handleNext}>
-            <i className={"fa-solid fa-arrow-right " + style.icon}></i>
+            <i className={ARROW_RIGHT_ICON + style.icon}></i>
           </button>
         )}
       </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { LINK_HOME } from "../constants";
+import { LINK_HOME, SEARCH_ID } from "../constants";
 import style from "../Styles/Searchbar.module.css";
 
 const Searchbar = () => {
@@ -16,7 +16,7 @@ const Searchbar = () => {
   }
 
   useEffect(() => {
-    (document.getElementById("search") as HTMLInputElement).value =
+    (document.getElementById(SEARCH_ID) as HTMLInputElement).value =
       params.get("s")!;
   }, [search]);
 
@@ -25,7 +25,7 @@ const Searchbar = () => {
       <input
         className={style.searchbar}
         type="search"
-        id="search"
+        id={SEARCH_ID}
         onChange={(e) => setsearch(e.target.value)}
         onKeyDown={(e) => {
           if (e.code === "Enter") {
