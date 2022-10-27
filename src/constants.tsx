@@ -56,3 +56,11 @@ export const FACEBOOK_ICON = "fa-brands fa-facebook";
 export const YOUTUBE_ICON = "fa-brands fa-youtube";
 export const ABOUT_HEADER =
   "https://cdn.discordapp.com/attachments/710546761537683490/1032572978422108201/uuuuuu.jpg";
+
+export const ADD_TO_FAVORITE = "Add to favorite";
+export const REMOVE_FROM_CART = "Remove from cart";
+export const ADD_TO_CART = "Add to cart";
+export const REMOVE_FROM_FAVORITE = "Remove from favorite";
+export const RELATED_ITEMS = "Related items";
+export const URL = "url";
+export const ID = "id";
