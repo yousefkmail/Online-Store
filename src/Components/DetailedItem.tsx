@@ -10,10 +10,13 @@ import Shoppingitems from "./Shoppingitems";
 import {
   ADD_TO_CART,
   ADD_TO_FAVORITE,
+  ID,
   IMAGE_NOT_FOUND,
+  LINK_HOME,
   RELATED_ITEMS,
   REMOVE_FROM_CART,
   REMOVE_FROM_FAVORITE,
+  URL,
 } from "../constants";
 const Detaileditem = () => {
   const { id } = useParams();
@@ -21,7 +24,7 @@ const Detaileditem = () => {
   const context = useContext(AppContext);
   const { Items, Addtocart, Addtofavorite, Favorite, Cart } = context;
   const [item, setItem] = useState<item>({} as item);
-  const EXCEPTIONS_ARRAY = ["url", "id"];
+  const EXCEPTIONS_ARRAY = [URL, ID];
 
   useEffect(() => {
     let item: item = {} as item;
@@ -31,7 +34,8 @@ const Detaileditem = () => {
         item = element;
       }
     });
-    if (Items.length > 0 && Object.keys(item).length === 0) navigate("/home");
+    if (Items.length > 0 && Object.keys(item).length === 0)
+      navigate("/" + LINK_HOME);
   }, [Items, id]);
 
   function getitemdata() {
