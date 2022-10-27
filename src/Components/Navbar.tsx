@@ -4,17 +4,17 @@ import style1 from "../Styles/Shoppingitem.module.css";
 
 import { useState } from "react";
 import {
-  LINK_About,
-  LINK_Contact,
   WEBSITE_LOGO,
   INCART_ICON,
   INFAVORITE_ICON,
   IMAGE_NOT_FOUND,
-  MENU_LABEL,
-  CLOSE_LABEL,
+  LINK_ABOUT,
+  LINK_CONTACT,
+  LINK_HOME,
   MY_CART_LINK,
   FAVORITE_LINK,
-  LINK_HOME,
+  MENU_LABEL,
+  CLOSE_LABEL,
 } from "../constants";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
@@ -43,8 +43,8 @@ const Navbar = () => {
           isNavBarActive ? style.navbuttonshowen : style.navbuttonshidden
         }
       >
-        <Navbutton link={LINK_About} />
-        <Navbutton link={LINK_Contact} />
+        <Navbutton link={LINK_ABOUT} />
+        <Navbutton link={LINK_CONTACT} />
         <Navbutton link={LINK_HOME} />
         <button className={style.togglebutton} onClick={onToggle}>
           {CLOSE_LABEL}
