@@ -11,6 +11,14 @@ import Detaileditem from "./DetailedItem";
 import Footer from "./Footer";
 import Nocomponentfound from "./NoItemsFound";
 import Searchbar from "./SearchBar";
+import {
+  FAVORITE_LINK,
+  LINK_ABOUT,
+  LINK_CONTACT,
+  LINK_HOME,
+  MY_CART_LINK,
+  LINK_ITEM,
+} from "../constants";
 
 function App() {
   const context = useContext(AppContext);
@@ -22,10 +30,10 @@ function App() {
         <Navbar />
         <Searchbar />
         <Routes>
-          <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route path={LINK_HOME} element={<Home />} />
+          <Route path={LINK_ABOUT} element={<About />} />
           <Route
-            path="favorite"
+            path={FAVORITE_LINK}
             element={
               Favorite.length > 0 ? (
                 <Shoppingitems items={Favorite} />
@@ -35,7 +43,7 @@ function App() {
             }
           />
           <Route
-            path="mycart"
+            path={MY_CART_LINK}
             element={
               Cart.length > 0 ? (
                 <Shoppingitems items={Cart} />
@@ -44,8 +52,8 @@ function App() {
               )
             }
           />
-          <Route path="item/:id" element={<Detaileditem />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path={LINK_ITEM + "/:id"} element={<Detaileditem />} />
+          <Route path={LINK_CONTACT} element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </div>

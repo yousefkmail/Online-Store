@@ -1,5 +1,3 @@
-export const LINK_About = "About";
-export const LINK_Contact = "Contact";
 export const ADDRESS = "her business/home address";
 export const PHONE_NUMBER = "056943555";
 export const EMAIL = "yousef.hnaty@gmail.com";
@@ -7,6 +5,8 @@ export const WEBSITE = "www.cuebat.com";
 export const LINK_ABOUT = "about";
 export const LINK_CONTACT = "contact";
 export const LINK_HOME = "home";
+export const LINK_ITEM = "item";
+
 export const FAVORITE_ICON = "fa-regular fa-star";
 export const ADDTOCART_ICON = " fa-solid fa-cart-plus";
 export const INCART_ICON = "fa-solid fa-cart-shopping ";
