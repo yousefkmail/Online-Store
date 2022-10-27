@@ -1,7 +1,11 @@
 import { initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { firebaseConfig_const, COLLECTION_SERVICES_NAME } from "../constants";
+import {
+  firebaseConfig_const,
+  COLLECTION_SERVICES_NAME,
+  SERVICE_TICK_ICON,
+} from "../constants";
 import style from "../Styles/About.module.css";
 interface service {
   Description: string;
@@ -29,7 +33,7 @@ const Services = () => {
     <div className={style.services}>
       {services.map((item) => (
         <div className={style.service} key={item.id}>
-          <i className={"fa-solid fa-check" + " " + style.icon}> </i>
+          <i className={{ SERVICE_TICK_ICON } + " " + style.icon}> </i>
           <p> {item.Description}</p>
         </div>
       ))}

@@ -64,3 +64,9 @@ export const REMOVE_FROM_FAVORITE = "Remove from favorite";
 export const RELATED_ITEMS = "Related items";
 export const URL = "url";
 export const ID = "id";
+export const HOME_PAGE_HEADER =
+  "https://i0.wp.com/watanimall.com/wp-content/uploads/2022/08/WATANI-SECURITY-PROGRAM-BANNER.png?fit=1920%2C675&ssl=1";
+export const SEARCH_ID = "search";
+export const SERVICE_TICK_ICON = "fa-solid fa-check";
+export const ARROW_LEFT_ICON = "fa-solid fa-arrow-left ";
+export const ARROW_RIGHT_ICON = "fa-solid fa-arrow-right ";
