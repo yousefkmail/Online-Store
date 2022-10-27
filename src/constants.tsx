@@ -62,4 +62,3 @@ export const REMOVE_FROM_CART = "Remove from cart";
 export const ADD_TO_CART = "Add to cart";
 export const REMOVE_FROM_FAVORITE = "Remove from favorite";
 export const RELATED_ITEMS = "Related items";
-export const EXCEPTIONS_ARRAY = ["url", "id"];

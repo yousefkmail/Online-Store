@@ -14,7 +14,6 @@ import {
   RELATED_ITEMS,
   REMOVE_FROM_CART,
   REMOVE_FROM_FAVORITE,
-  EXCEPTIONS_ARRAY,
 } from "../constants";
 const Detaileditem = () => {
   const { id } = useParams();
@@ -22,6 +21,7 @@ const Detaileditem = () => {
   const context = useContext(AppContext);
   const { Items, Addtocart, Addtofavorite, Favorite, Cart } = context;
   const [item, setItem] = useState<item>({} as item);
+  const EXCEPTIONS_ARRAY = ["url", "id"];
 
   useEffect(() => {
     let item: item = {} as item;
