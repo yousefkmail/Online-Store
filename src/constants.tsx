@@ -2,9 +2,9 @@ export const ADDRESS = "her business/home address";
 export const PHONE_NUMBER = "056943555";
 export const EMAIL = "yousef.hnaty@gmail.com";
 export const WEBSITE = "www.cuebat.com";
-export const LINK_ABOUT = "about";
-export const LINK_CONTACT = "contact";
-export const LINK_HOME = "home";
+export const LINK_ABOUT = "About";
+export const LINK_CONTACT = "Contact";
+export const LINK_HOME = "Home";
 export const LINK_ITEM = "item";
 
 export const FAVORITE_ICON = "fa-regular fa-star";
@@ -12,7 +12,7 @@ export const ADDTOCART_ICON = " fa-solid fa-cart-plus";
 export const INCART_ICON = "fa-solid fa-cart-shopping ";
 export const INFAVORITE_ICON = "fa-solid fa-star";
 export const WEBSITE_LOGO =
-  " http://cardwellchiropractic.com/static/media/cardwell-logo1.fb8cf282.png";
+  "https://cdn.discordapp.com/attachments/710546761537683490/1036352503941443675/logo-leaf_1_1_1_1_628c1a76-0c5a-4fb0-80ff-4113dd63474d.webp";
 export const PRICE_SLIDER_LABEL = "Pick Your Price  ";
 export const CONTACTUS_NAME = "Name";
 export const CONTACTUS_EMAIL = "Email";
@@ -65,7 +65,7 @@ export const RELATED_ITEMS = "Related items";
 export const URL = "url";
 export const ID = "id";
 export const HOME_PAGE_HEADER =
-  "https://i0.wp.com/watanimall.com/wp-content/uploads/2022/08/WATANI-SECURITY-PROGRAM-BANNER.png?fit=1920%2C675&ssl=1";
+  "https://assets2.razerzone.com/pages/barracuda-x-4c578898e8144ee8da21dde32b7a9f5f/barracuda-x_hero_desktop.jpg";
 export const SEARCH_ID = "search";
 export const SERVICE_TICK_ICON = "fa-solid fa-check";
 export const ARROW_LEFT_ICON = "fa-solid fa-arrow-left ";

@@ -21,9 +21,9 @@ const Searchbar = () => {
   }, [search]);
 
   return (
-    <div>
+    <div className={style.searchbar}>
       <input
-        className={style.searchbar}
+        className={style.inputfield}
         type="search"
         id={SEARCH_ID}
         onChange={(e) => setsearch(e.target.value)}
