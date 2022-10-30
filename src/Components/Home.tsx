@@ -34,7 +34,19 @@ const Home = () => {
         <Filterbar
           SetFilteredItems={(filtereditems) => SetFilteredItems(filtereditems)}
         />
-        <Shoppingitems items={filtereditems} />
+        <div>
+          <br />
+          <div>
+            <h2>Availabe items </h2>
+          </div>
+          <Shoppingitems items={filtereditems} />
+        </div>
+      </div>
+      <div>
+        <img
+          src="https://cdn.discordapp.com/attachments/710546761537683490/1036367939361845328/unknown.png"
+          alt=""
+        />
       </div>
     </div>
   );

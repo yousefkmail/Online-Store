@@ -1,5 +1,4 @@
 import style from "../Styles/Filterbar.module.css";
-import { PRICE_SLIDER_LABEL } from "../constants";
 import { item } from "../Types";
 import { FormEvent, useContext, useEffect, useState } from "react";
 import { AppContext } from "../Context/AppContext";
@@ -58,8 +57,8 @@ const Filterbar = ({ SetFilteredItems }: props) => {
 
   return (
     <div className={style.filterbar}>
-      <input type="range" name="" id="" />
-
+      <br />
+      <br />
       {
         <form className={style.typeform} action="">
           {getTypes()}
