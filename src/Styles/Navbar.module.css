@@ -4,16 +4,12 @@
   height: 100px;
   position: sticky;
   top: 0;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: rgb(36, 84, 71);
+  background-color: rgb(255, 255, 255);
   z-index: 1;
-}
-
-.navigationbar img {
-  color: white;
+  box-shadow: 9px 14px 16px 1px rgb(80, 67, 67, 0.17);
 }
 
 .navbuttons {
@@ -55,17 +51,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .navbutton:hover {
-  color: white;
+  color: rgb(0, 0, 0);
   border: none;
 }
 
 .navbuttonactive {
-  color: white;
-  border-bottom: 3px solid rgb(253, 253, 253);
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(79, 116, 188);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -87,14 +83,14 @@
   padding: 10px 0px;
   border: none;
   position: relative;
-  background-color:#155B4A ;
-  color:white;
-  
-cursor: pointer;
+  background-color: #155b4a;
+  color: white;
+
+  cursor: pointer;
 }
 
 .togglebuttonalone {
-  background-color:#245447 ;
+  background-color: #245447;
 
   width: 200px;
 }
@@ -111,14 +107,20 @@ cursor: pointer;
 
 .mydiv:hover::before {
   width: 100%;
-  border-bottom: 3px solid rgb(253, 253, 253);
+  border-bottom: 3px solid rgb(79, 116, 188);
 }
 
 i {
-  color: #15d186;
+  color: rgb(34, 58, 106);
   width: 40px;
   height: 40px;
   margin: 15px;
+}
+
+.icon {
+  line-height: 0;
+  font-size: 2em;
+  vertical-align: -0.1875em;
 }
 
 .cartfavoriteicons {
@@ -129,8 +131,7 @@ i {
 }
 
 .navimage {
-  width: 15%;
-  aspect-ratio: 3/1;
+  height: 100%;
 }
 
 @media only screen and (min-width: 600px) {

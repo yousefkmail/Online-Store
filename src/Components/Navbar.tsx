@@ -1,6 +1,5 @@
 import style from "../Styles/Navbar.module.css";
 import Navbutton from "./navbutton";
-import style1 from "../Styles/Shoppingitem.module.css";
 
 import { useState } from "react";
 import {
@@ -17,6 +16,7 @@ import {
   CLOSE_LABEL,
 } from "../constants";
 import { NavLink } from "react-router-dom";
+import Searchbar from "./SearchBar";
 const Navbar = () => {
   const [isNavBarActive, setIsNavBarActive] = useState(true);
 
@@ -43,19 +43,21 @@ const Navbar = () => {
           isNavBarActive ? style.navbuttonshowen : style.navbuttonshidden
         }
       >
-        <Navbutton link={LINK_ABOUT} />
-        <Navbutton link={LINK_CONTACT} />
         <Navbutton link={LINK_HOME} />
+        <Navbutton link={LINK_CONTACT} />
+        <Navbutton link={LINK_ABOUT} />
         <button className={style.togglebutton} onClick={onToggle}>
           {CLOSE_LABEL}
         </button>
       </div>
+      <Searchbar />
+
       <div className={style.cartfavoriteicons}>
         <NavLink to={MY_CART_LINK}>
-          <i className={INCART_ICON + " " + style1.icon}></i>
+          <i className={INCART_ICON + " " + style.icon}></i>
         </NavLink>
         <NavLink to={FAVORITE_LINK}>
-          <i className={INFAVORITE_ICON + " " + style1.icon}></i>
+          <i className={INFAVORITE_ICON + " " + style.icon}></i>
         </NavLink>
       </div>
     </nav>

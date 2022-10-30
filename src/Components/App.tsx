@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <Searchbar />
+        {/* <Searchbar /> */}
         <Routes>
           <Route path={LINK_HOME} element={<Home />} />
           <Route path={LINK_ABOUT} element={<About />} />
