@@ -9,7 +9,7 @@ interface props {
 }
 
 const Shoppingitems = ({ items }: props) => {
-  const [numberofitems, setnumberofitems] = useState<number>(5);
+  const [numberofitems, setnumberofitems] = useState<number>(8);
   const [firstitem, setfirstitem] = useState<number>(0);
   const [lastitem, setlastitem] = useState<number>(numberofitems);
   const [Nextdisabled, setnextdisabled] = useState<boolean>();
@@ -44,19 +44,22 @@ const Shoppingitems = ({ items }: props) => {
         {items.slice(firstitem, lastitem).map((item) => (
           <Shoppingitem key={item.id} item={item} />
         ))}
+        <div className={style.controllingbuttons}>
+          {items.length > 0 && (
+            <button disabled={Prevdisabled} onClick={handlePrev}>
+              <i className={ARROW_LEFT_ICON + style.icon}></i>
+            </button>
+          )}
+          {items.length > 0 && (
+            <button disabled={Nextdisabled} onClick={handleNext}>
+              <i className={ARROW_RIGHT_ICON + style.icon}></i>
+            </button>
+          )}
+        </div>
       </div>
-      <div className={style.controllingbuttons}>
-        {items.length > 0 && (
-          <button disabled={Prevdisabled} onClick={handlePrev}>
-            <i className={ARROW_LEFT_ICON + style.icon}></i>
-          </button>
-        )}
-        {items.length > 0 && (
-          <button disabled={Nextdisabled} onClick={handleNext}>
-            <i className={ARROW_RIGHT_ICON + style.icon}></i>
-          </button>
-        )}
-      </div>
+
+      <br />
+      <br />
     </div>
   );
 };

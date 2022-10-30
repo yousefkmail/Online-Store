@@ -2,15 +2,18 @@
   min-width: 200px;
   border-radius: 30px;
   margin: 20px;
-  box-shadow: 9px 14px 16px 14px rgb(80, 67, 67, 0.17);
+  box-shadow: 9px 14px 16px 1px rgb(80, 67, 67, 0.17);
   position: relative;
+  height: auto;
 }
 
-.filterbar input[type="Range"] {
-  margin-top: 30px;
+.itemtype {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .itemtype label,
